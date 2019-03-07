@@ -1,0 +1,11 @@
+<section id="pending" class="">
+    <div class="anakoinwseis"><h2>PENDING</h2></div>
+    {{#each posts}}
+        <div class="post">
+            <p>ID: {{this.id}}</p>
+            <p>{{this.date}}</p>
+            <br>
+            <p><h3>{{this.body}}</h3></p>
+        </div>
+    {{/each}}
+</section>

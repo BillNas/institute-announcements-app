@@ -1,0 +1,10 @@
+<section id="index" class="">
+    <div class="anakoinwseis"><h2>ΑΝΑΚΟΙΝΩΣΕΙΣ</h2></div>
+        {{#each posts}}
+        <div class="post">
+            <p>{{this.date}}</p>
+            <br>
+            <p><h3>{{this.body}}</h3></p>
+    </div>
+        {{/each}}
+</section>

@@ -1,0 +1,26 @@
+{
+  "name": "simple-announcements-institute-app",
+  "version": "1.0.0",
+  "description": "this is a simple app for insititute announcements",
+  "main": "app.js",
+  "scripts": {
+    "run": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dependencies": "0.0.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.4.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BillNas/simple-announcements-institute-app.git"
+  },
+  "author": "bill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BillNas/simple-announcements-institute-app/issues"
+  },
+  "homepage": "https://github.com/BillNas/simple-announcements-institute-app#readme"
+}

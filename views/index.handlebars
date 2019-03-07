@@ -1,0 +1,23 @@
+<section id="index" class="">
+    <form action="/" method="POST">
+    <div class="anakoinwseis"><h2>ΑΝΕΒΑΣΕ ΜΙΑ ΑΝΑΚΟΙΝΩΣΗ</h2></div>
+        <h4>* Αναρτήσεις άσχετες με το ΤΕΙ θα διαγράφονται</h4>
+        <div class="input-group">
+            {{#each errors}}
+                <div class="error">
+                    <p>{{text}}</p>
+                </div>
+            {{/each}}
+            <div class="input-group">
+                {{#each success}}
+                    <div class="success">
+                        <p><i class="fa fa-check" aria-hidden="true"></i> {{text}}</p>
+                    </div>
+                {{/each}}
+            <label for="body"></label>
+            <textarea name="body" id="body" class="input-box"
+                          rows="5">{{body}}</textarea>
+            </div>
+            <input type="submit" value="Αποστολή" id="btn" class="btn btn-reverse">
+    </form>
+</section>

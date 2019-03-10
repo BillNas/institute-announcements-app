@@ -31,8 +31,9 @@ if (process.env.NODE_ENV === "production") {
 } else {
     mongoose.connect(db);
 }
+//error handler
 app.get('*', function(req, res){
-  res.status(404).send('what???');
+    res.status(404).render('error');
 });
 
 app.listen(process.env.PORT || 5000, function(){

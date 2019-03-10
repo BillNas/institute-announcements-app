@@ -8,7 +8,7 @@ mongoose
     .then(() => console.log('Connected to MongoDB...'))
     .catch(err => console.log(err));
 
-router.get('/anakoinwseis', (req, res) =>{
+router.get('/posts', (req, res) =>{
     Post.find({status:'1'})
         .exec()
         .then(posts =>
@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
         errors.push({text:"Συμπληρώστε αυτο το πεδίο!"});
         res.render('index',{errors});
     }else {
-        success.push({text:"Η ανακοίνωση σου επιβλήθηκε με επιτυχία και θα αναρτηθεί όταν εγκριθεί απο τον διαχειριστή!"});
+        success.push({text:"Η ανακοίνωση σου υποβλήθηκε με επιτυχία και θα αναρτηθεί όταν εγκριθεί απο τον διαχειριστή!"});
         const newPost = new Post({
             _id: new mongoose.Types.ObjectId(),
             body

@@ -31,6 +31,9 @@ if (process.env.NODE_ENV === "production") {
 } else {
     mongoose.connect(db);
 }
+app.get('*', function(req, res){
+  res.status(404).send('what???');
+});
 
 app.listen(process.env.PORT || 5000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);

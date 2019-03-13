@@ -8,6 +8,8 @@ mongoose
     .then(() => console.log('Connected to MongoDB...'))
     .catch(err => console.log(err));
 
+router.get('/about',(req,res)=>res.render('about'));
+
 router.get('/posts', (req, res) =>{
     Post.find({status:'1'})
         .exec()
@@ -39,5 +41,18 @@ router.post('/', (req, res) => {
         newPost.save().then(res.render('index',{success}));
     }
 });
-router.get('/about',(req,res)=>res.render('about'));
+router.get('/api/posts', (req, res) =>{
+    Post.find({status:'1'})
+        .exec()
+        .then(posts =>
+        {
+            console.log(posts);
+            res.json(posts)
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({error :error})
+        });
+});
+
 module.exports = router;
